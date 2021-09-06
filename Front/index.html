@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bienvenido...</title>
+</head>
+<body>
+<div id="app">
+<table>
+    <tr>
+        <td>
+            Date
+        </td>
+        <td>
+            Description
+        </td>
+    </tr>
+    <tr v-for="rep in reports">
+        <td>
+            {{ rep[0].date }}
+        </td>
+        <td>
+            <ul>
+                <li v-for="floor in rep">
+                    {{ floor['name'] }} found in floor {{ floor['floor'] }}
+                </li>
+            </ul>
+        </td>
+    </tr>
+</table>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            reports: []
+        },
+        mounted() {
+            let vm = this;
+            axios.get('/api/reports')
+                .then(function (response) {
+                    vm.reports = response.data;
+                })
+        }
+    })
+</script>
+</body>
+</html>
