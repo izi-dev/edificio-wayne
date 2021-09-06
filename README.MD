@@ -1,11 +1,11 @@
-#PRUEBAS EDIFICIOS WAYNE
+# PRUEBAS EDIFICIOS WAYNE
 
-##REQUISITOS
+## REQUISITOS
 - PHP 7.4
 - Mysql
 - Composer
 
-##INSTALACION
+## INSTALACION
 
 - `composer install`
 - Crear tabla en mysql
@@ -14,7 +14,7 @@
 - Ruta de la api `http://localhost:8000/api/reports`
 - Ruta del front `http://localhost:8000/front/index.html`
 
-##ARQUITECTURA MVC
+## ARQUITECTURA MVC
 
 Este proyecto no es recomendado para ambientes productivos, ya que solamente fue realizado para la prueba.
 
