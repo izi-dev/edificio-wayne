@@ -1,6 +1,6 @@
 {
-    "name": "izi-dev/edificio-wayne",
-    "description": "Prueba tecnica",
+    "name": "izi-dev/framework-without-laravel",
+    "description": "Using components laravel without laravel",
     "type": "project",
     "license": "MIT",
     "authors": [
